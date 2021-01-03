@@ -9,6 +9,8 @@ const app = express();
 const port = process.env.PORT || 8001;
 const connection_url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}?retryWrites=true&w=majority`;
 
+console.log(connection_url);
+
 mongoose.connect(connection_url, {
     useNewUrlParser: true,
     useCreateIndex: true,
