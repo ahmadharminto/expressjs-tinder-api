@@ -3,7 +3,7 @@ import Cards from './models/Cards.js';
 
 const router = express.Router();
 
-router.get('/', (req, res) => res.status(200).send('OK'));
+router.get('/', (req, res) => res.status(200).send('<a href="toymakr3d.com">Toymakr3D</a>'));
 router.post('/card', (req, res) => {
     const dbCard = req.body;
     Cards.create(dbCard, (err, data) => {
