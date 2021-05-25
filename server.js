@@ -17,6 +17,9 @@ mongoose.connect(connection_url, {
 
 app.use(Cors());
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 app.use('/', routes);
 
 app.listen(port, () => console.log(`Listening on localhost:${port}`));
